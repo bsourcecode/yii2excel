@@ -1,23 +1,23 @@
 {
     "name": "bsourcecode/yii2excel",
-	"version": "1.1.1",
-    "description": "This library is used to generate the excel sheet from yii framework 2.0 grid view widget.",
-    "keywords": ["yii2", "extension", "widget", "export", "spreadsheet"],
+    "description": "YII2 GRIDVIEW TO EXCEL",
+    "keywords": ["yii2", "extension", "widget"],
     "homepage": "https://github.com/bsourcecode/yii2excel",
-    "type": "yii2-extension",
-    "license": "BSD 3-Clause",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
-            "name": "BSOURCECODE",
+            "name": "Bala Sundaram",
             "email": "bsourcecode.com@gmail.com",
             "homepage": "http://www.bsourcecode.com"
         }
     ],
     "require": {
+        "php": ">=5.3.*",
         "phpoffice/phpexcel": "*"
     },
-    "minimum-stability": "dev",
-	"autoload": {
-        "files": ["ExcelGrid.php"]
-    },
+	"minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { "bsourcecode\\Gridview": "/" }
+    }
 }
