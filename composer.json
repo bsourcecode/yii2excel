@@ -13,11 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.*",
         "phpoffice/phpexcel": "*"
     },
 	"minimum-stability": "dev",
-    "autoload": {
-        "psr-0": { "bsourcecode\\Gridview": "/" }
-    }
 }
