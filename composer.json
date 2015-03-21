@@ -1,5 +1,6 @@
 {
     "name": "bsourcecode/yii2excel",
+	"version": "1.1.1",
     "description": "This library is used to generate the excel sheet from yii framework 2.0 grid view widget.",
     "keywords": ["yii2", "extension", "widget", "export", "spreadsheet"],
     "homepage": "https://github.com/bsourcecode/yii2excel",
