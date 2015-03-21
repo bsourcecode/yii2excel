@@ -1,5 +1,6 @@
 {
     "name": "bsourcecode/yii2excel",
+	"version": "1.0.0",
     "description": "YII2 GRIDVIEW TO EXCEL",
     "keywords": ["yii2", "extension", "widget"],
     "homepage": "https://github.com/bsourcecode/yii2excel",
@@ -13,6 +14,7 @@
         }
     ],
     "require": {
+		"php": ">=5.3.*",
         "phpoffice/phpexcel": "*"
     },
 }
