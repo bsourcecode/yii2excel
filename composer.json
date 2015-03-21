@@ -6,6 +6,12 @@
     "homepage": "https://github.com/bsourcecode/yii2excel",
     "type": "library",
     "license": "MIT",
+	"version" : "1.0.0.",
+	"source": {
+		"url": "https://github.com/bsourcecode/yii2excel.git",
+		"type": "git",
+		"reference": "master"
+	},
     "authors": [
         {
             "name": "Bala Sundaram",
