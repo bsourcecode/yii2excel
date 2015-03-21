@@ -16,9 +16,7 @@
         "phpoffice/phpexcel": "*"
     },
     "minimum-stability": "stable",
-    "autoload": {
-        "psr-4": {
-            "bsourcecode\\yii2excel\\": ""
-        }
-    }
+	"autoload": {
+        "files": ["ExcelGrid.php"]
+    },
 }
