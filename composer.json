@@ -15,7 +15,7 @@
     "require": {
         "phpoffice/phpexcel": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
 	"autoload": {
         "files": ["ExcelGrid.php"]
     },
