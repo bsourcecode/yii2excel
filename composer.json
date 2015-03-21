@@ -1,19 +1,25 @@
-"repositories": [
-    {
-        "type": "package",
-        "package": {
-            "name": "weaverryan/derp-dangerzone",
-            "version": "dev-master",
-            "source": {
-                "url": "git://github.com/weaverryan/derp-dangerzone.git",
-                "type": "git",
-                "reference": "master"
-            },
-            "autoload": {
-                "psr-0" : {
-                    "Weaverryan\\DangerZone" : "src"
-                }
-            }
+{
+    "name": "bsourcecode/yii2excel",
+	"version": "1.0.0",
+    "description": "YII2 GRIDVIEW TO EXCEL",
+    "keywords": ["yii2", "extension", "widget"],
+    "homepage": "https://github.com/bsourcecode/yii2excel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bala Sundaram",
+            "email": "bsourcecode.com@gmail.com",
+            "homepage": "http://www.bsourcecode.com"
         }
-    }
-],
+    ],
+    "require": {
+		"php": ">=5.3.*",
+        "phpoffice/phpexcel": "*"
+    },
+	"autoload": {
+        "psr-0": {
+            "Bala\\": ""
+        }
+    },
+}
