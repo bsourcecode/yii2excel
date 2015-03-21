@@ -15,6 +15,10 @@
     ],
     "require": {
 		"php": ">=5.3.*",
-        "phpoffice/phpexcel": "*"
+    },
+	"autoload": {
+        "psr-0": {
+            "Bala\\": ""
+        }
     },
 }
