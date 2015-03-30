@@ -1,5 +1,6 @@
 <?php
-namespace excelgrid;
+namespace app\components;
+//namespace bsource\gridview;//in vendor folder
 
 use Yii;
 use Closure;
@@ -18,7 +19,7 @@ use \PHPExcel_Style_Fill;
 use \PHPExcel_Writer_IWriter;
 use \PHPExcel_Worksheet;
 
-class Excelgrid extends \yii\grid\GridView
+class ExcelGrid extends \yii\grid\GridView
 {
 	public $columns_array;
 	public $properties;
