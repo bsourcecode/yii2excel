@@ -208,6 +208,6 @@ class ExcelGrid extends \yii\grid\GridView
 		header("Expires: 0");
 		header("Pragma: no-cache");
 		header("Content-Type: application/{$this->extension}");
-        header("Content-Disposition: attachment; filename={$this->filename}.{$this->extension}");
+		header("Content-Disposition: attachment; filename={$this->filename}.{$this->extension}");
     }
 }
