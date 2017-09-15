@@ -205,10 +205,13 @@ class ExcelGrid extends \yii\grid\GridView
 	
 	protected function setHttpHeaders()
     {
-		header("Cache-Control: no-cache");
-		header("Expires: 0");
-		header("Pragma: no-cache");
-		header("Content-Type: application/{$this->extension}");
-		header("Content-Disposition: attachment; filename={$this->filename}.{$this->extension}");
+		Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+		$headers = Yii::$app->response->headers;
+
+		$headers->set('Cache-Control', 'no-cache');
+		$headers->set('Expires', '0');
+		$headers->set('Pragma', 'no-cache');
+		$headers->set('Content-Type', "application/{$this->extension}");
+		$headers->set('Content-Disposition', "attachment; filename={$this->filename}.{$this->extension}");
     }
 }
