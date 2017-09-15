@@ -45,8 +45,8 @@ class ExcelGrid extends \yii\grid\GridView
 		$row = $this->generateBody();
 		$writer = $this->_objPHPExcelWriter;
 		$this->setHttpHeaders();
-        $writer->save('php://output');
-        Yii::$app->end();
+		$writer->save('php://output');
+		Yii::$app->end();
 		//$writer->save('test.xlsx');
 		parent::run();
 	}
@@ -82,12 +82,12 @@ class ExcelGrid extends \yii\grid\GridView
 		$this->_objPHPExcelSheet = $this->_objPHPExcel->getActiveSheet();
 	}
 	public function initPHPExcelWriter($writer)
-    {
+	{
 		$this->_objPHPExcelWriter = PHPExcel_IOFactory::createWriter(
 			$this->_objPHPExcel,
 			$writer
 		);
-    }
+	}
 	public function generateHeader(){
 		$this->setVisibleColumns();
 		$sheet = $this->_objPHPExcelSheet;
@@ -103,7 +103,7 @@ class ExcelGrid extends \yii\grid\GridView
 	}
 	
 	public function generateBody()
-    {
+	{
 		$columns = $this->_visibleColumns;
 		$models = array_values($this->_provider->getModels());
 		if (count($columns) == 0) {
@@ -128,10 +128,10 @@ class ExcelGrid extends \yii\grid\GridView
 			$this->_endRow
 		);
 		return ($this->_endRow > 0) ? count($models) : 0;
-    }
+	}
 	
-    public function generateRow($model, $key, $index)
-    {
+	public function generateRow($model, $key, $index)
+	{
 		$cells = [];
 		/* @var $column Column */
 		$this->_endCol = 0;
@@ -151,10 +151,10 @@ class ExcelGrid extends \yii\grid\GridView
 			$cell = $this->_objPHPExcelSheet->setCellValue(self::columnName($this->_endCol) . ($index + $this->_beginRow + 1),
 				strip_tags($value), true);
 		}
-    }
+	}
 	
 	protected function setVisibleColumns()
-    {
+	{
 		$cols = [];
 		foreach ($this->columns as $key => $column) {
 			if ($column instanceof \yii\grid\SerialColumn || $column instanceof \yii\grid\ActionColumn) {
@@ -163,10 +163,10 @@ class ExcelGrid extends \yii\grid\GridView
 			$cols[] = $column;
 		}
 		$this->_visibleColumns = $cols;
-    }
+	}
 	
 	public function getColumnHeader($col)
-    {
+	{
 		if(isset($this->columns_array[$col->attribute]))
 			return $this->columns_array[$col->attribute];
 		/* @var $model yii\base\Model */
@@ -190,9 +190,9 @@ class ExcelGrid extends \yii\grid\GridView
 			$label = $col->label;
 		}
 		return $label;
-    }
+	}
 	public static function columnName($index)
-    {
+	{
 		$i = $index - 1;
 		if ($i >= 0 && $i < 26) {
 			return chr(ord('A') + $i);
@@ -201,10 +201,10 @@ class ExcelGrid extends \yii\grid\GridView
 			return (self::columnName($i / 26)) . (self::columnName($i % 26 + 1));
 		}
 		return 'A';
-    }
+	}
 	
 	protected function setHttpHeaders()
-    {
+	{
 		Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
 		$headers = Yii::$app->response->headers;
 
@@ -213,5 +213,6 @@ class ExcelGrid extends \yii\grid\GridView
 		$headers->set('Pragma', 'no-cache');
 		$headers->set('Content-Type', "application/{$this->extension}");
 		$headers->set('Content-Disposition', "attachment; filename={$this->filename}.{$this->extension}");
-    }
+	}
 }
+
